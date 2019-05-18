@@ -7,7 +7,7 @@ This application is a simple Minesweep clone LOOSELY patterned after the [Micros
 I created this game as an opportunity to learn Typescript, and how it can be used to create stand alone JS applications for the browser.
 
 ### Technologies used:
-- [HTML 5 canvas element](https://html.spec.whatwg.org/multipage/canvas.html#2dcontext) element provides scripts with a resolution-dependent bitmap canvas, which can be used for rendering graphs, game graphics, art, or other visual images on the fly.
+- [HTML 5 canvas element](https://html.spec.whatwg.org/multipage/canvas.html#2dcontext) provides scripts with a resolution-dependent bitmap canvas, which can be used for rendering graphs, game graphics, art, or other visual images on the fly.
 - [Typescript](https://www.typescriptlang.org/) is a typed superset of JavaScript that compiles to plain JavaScript.
 - [webpack](https://webpack.js.org/) is a static module bundler for modern JavaScript applications.
 - [webpack cli](https://webpack.js.org/api/cli/) provides a flexible set of commands for developers to increase speed when setting up a custom webpack project.
