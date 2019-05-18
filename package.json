@@ -1,16 +1,19 @@
 {
   "name": "ts-mine-sweep-game",
   "version": "0.0.1",
-  "description": "",
-  "main": "app.js",
+  "description": "Simple Minesweep Game in JS",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server"
   },
-  "author": "",
+  "author": "Charles Nicoletti",
   "license": "ISC",
   "devDependencies": {
-    "@types/createjs": "^1.0.1",
-    "lite-server": "^2.4.0"
+    "lite-server": "^2.4.0",
+    "ts-loader": "^6.0.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
   }
 }
