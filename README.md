@@ -1,4 +1,7 @@
 # TS Mine Sweep
+
+### Play it [here](https://cheznic.github.io/ts-mine-sweep-game/)
+
 This application is a simple Minesweep clone LOOSELY patterned after the [Microsoft's](https://www.microsoft.com/) 1992 Windows 3.1 Minesweeper game.  It's not an exact clone, but has a similar game play.
 
 I created this game as an opportunity to learn Typescript, and how it can be used to create stand alone JS applications for the browser.
