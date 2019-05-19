@@ -1,5 +1,5 @@
 import { Coordinate } from './coordinate';
-import { Tile } from './tile';
+import { Config } from './config';
 
 export class Stage {
    private canvas: HTMLCanvasElement;
@@ -36,7 +36,7 @@ export class Stage {
       event.preventDefault();
       event.stopPropagation();
       let point = new Coordinate(event.offsetX || event.layerX, event.offsetY || event.layerY);
-      let coordinate = new Coordinate(Math.floor(point.x / Tile.WIDTH), Math.floor(point.y / Tile.HEIGHT));
+      let coordinate = new Coordinate(Math.floor(point.x / Config.TILE_WIDTH), Math.floor(point.y / Config.TILE_HEIGHT));
       let custEvent = new CustomEvent('tileClickedEvent', { detail: { tile: { 'x': coordinate.x, 'y': coordinate.y } } });
       window.dispatchEvent(custEvent);
    }
@@ -45,7 +45,7 @@ export class Stage {
       event.preventDefault();
       event.stopPropagation();
       let point = new Coordinate(event.offsetX || event.layerX, event.offsetY || event.layerY);
-      let coordinate = new Coordinate(Math.floor(point.x / Tile.WIDTH), Math.floor(point.y / Tile.HEIGHT));
+      let coordinate = new Coordinate(Math.floor(point.x / Config.TILE_WIDTH), Math.floor(point.y / Config.TILE_HEIGHT));
       let custEvent = new CustomEvent('tileRightClickedEvent', { detail: { tile: { 'x': coordinate.x, 'y': coordinate.y } } });
       window.dispatchEvent(custEvent);
    }

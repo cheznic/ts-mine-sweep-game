@@ -14,8 +14,8 @@ export class MineField {
          this.tiles[x] = [];
          for (let y = 0; y < rows; y++) {
             this.tiles[x][y] = new Tile(x, y);
-            this.tiles[x][y].x = x * Tile.WIDTH;
-            this.tiles[x][y].y = y * Tile.HEIGHT;
+            this.tiles[x][y].x = x * Config.TILE_WIDTH;
+            this.tiles[x][y].y = y * Config.TILE_HEIGHT;
             this.tiles[x][y].row = y;
             this.tiles[x][y].col = x;
          }

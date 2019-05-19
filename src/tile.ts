@@ -1,6 +1,6 @@
+import { Config } from './config';
+
 export class Tile {
-   public static WIDTH: number = 22;
-   public static HEIGHT: number = 22;
    public x: number = -1;
    public y: number = -1;
    public row: number = -1;
@@ -11,11 +11,11 @@ export class Tile {
    public adjacentBombs: number = -1;
 
    private static readonly images = {
-      tile: { image: Tile.initImage(Tile.WIDTH, Tile.HEIGHT, './img/tile.png') },
-      flag: { image: Tile.initImage(Tile.WIDTH, Tile.HEIGHT, './img/flag.png') },
-      number: { image: Tile.initImage(Tile.WIDTH, Tile.HEIGHT, './img/number.png') },
-      bomb: { image: Tile.initImage(Tile.WIDTH, Tile.HEIGHT, './img/bomb.png') },
-      zero: { image: Tile.initImage(Tile.WIDTH, Tile.HEIGHT, './img/zero.png') }
+      tile: { image: Tile.initImage(Config.TILE_WIDTH, Config.TILE_HEIGHT, './img/tile.png') },
+      flag: { image: Tile.initImage(Config.TILE_WIDTH, Config.TILE_HEIGHT, './img/flag.png') },
+      number: { image: Tile.initImage(Config.TILE_WIDTH, Config.TILE_HEIGHT, './img/number.png') },
+      bomb: { image: Tile.initImage(Config.TILE_WIDTH, Config.TILE_HEIGHT, './img/bomb.png') },
+      zero: { image: Tile.initImage(Config.TILE_WIDTH, Config.TILE_HEIGHT, './img/zero.png') }
    }
 
    constructor(x: number, y: number) {

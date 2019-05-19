@@ -50,7 +50,13 @@ export class Game {
          for (let y = 0; y < Config.ROWS; y++) {
             let tile = this.mineField.getTile(x, y);
             let image = tile.getImage(this.over);
-            this.stage.context.drawImage(image, (x * Tile.WIDTH), y * Tile.HEIGHT, Tile.WIDTH, Tile.HEIGHT);
+            this.stage.context.drawImage(
+               image,
+               (x * Config.TILE_WIDTH),
+               y * Config.TILE_HEIGHT,
+               Config.TILE_WIDTH,
+               Config.TILE_HEIGHT
+            );
 
             if (tile.adjacentBombs > 0 && tile.isClicked) {
                switch (tile.adjacentBombs) {
@@ -65,7 +71,11 @@ export class Game {
                }
                this.stage.context.font = 'bold 13px Arial';
                this.stage.context.textAlign = 'center';
-               this.stage.context.fillText(tile.adjacentBombs.toString(), tile.x + (Tile.WIDTH / 2), tile.y + (Tile.WIDTH / 2 + 5));
+               this.stage.context.fillText(
+                  tile.adjacentBombs.toString(),
+                  tile.x + (Config.TILE_HEIGHT / 2),
+                  tile.y + (Config.TILE_WIDTH / 2 + 5)
+               );
             }
          }
          if (this.score >= (Config.COLS * Config.ROWS) - Config.BOMB_COUNT) {
@@ -87,7 +97,7 @@ export class Game {
       this.stage.context.shadowOffsetX = 1;
       this.stage.context.shadowOffsetY = 1;
       this.stage.context.shadowBlur = 3;
-      this.stage.context.fillText('You Win!', (Tile.WIDTH * Config.COLS / 2), (Tile.WIDTH * Config.ROWS / 2 + 22));
+      this.stage.context.fillText('You Win!', (Config.TILE_WIDTH * Config.COLS / 2), (Config.TILE_WIDTH * Config.ROWS / 2 + 22));
    }
 
    private getRandomColor = () => {
